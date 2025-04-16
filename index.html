@@ -20,6 +20,8 @@
     }
   </style>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body>
@@ -54,8 +56,68 @@
       Zajęcia nr 3 - 15.04.2025 r.
       ------------------------------------------------------------------------------------- -->
 
+  <div id="tasks-3">
+
+    <div class="container3">
+      <h1>Lista Użytkowników:</h1>
+      <div id="loading" class="loading">Ładowanie danych...</div>
+      <div id="users-container" class="users-container"></div>
+      <div id="error-message" class="error-message"></div>
+    </div>
+
+    <div id="fetchForm">
+      <form id="postFormFetch">
+        Fetch:
+        <div>
+          <label for="title">Tytuł:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div>
+          <label for="body">Treść:</label>
+          <textarea type="text" id="body" name="body" rows="4" required></textarea>
+        </div>
+        <button type="submit">Wyślij post</button>
+      </form>
+      <div id="messageDivFetch"></div>
+    </div>
+
+    <div id="axiosForm">
+      <form id="postFormAxios">
+        Axios:
+        <div>
+          <label for="title">Tytuł:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div>
+          <label for="body">Treść:</label>
+          <textarea type="text" id="body" name="body" rows="4" required></textarea>
+        </div>
+        <button type="submit">Wyślij post</button>
+      </form>
+      <div id="messageDivAxios"></div>
+    </div>
+
+    <div id="asyncAwaithForm">
+      <form id="postFormAsyncAwait">
+        Async/Await:
+        <div>
+          <label for="title">Tytuł:</label>
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div>
+          <label for="body">Treść:</label>
+          <textarea type="text" id="body" name="body" rows="4" required></textarea>
+        </div>
+        <button type="submit">Wyślij post</button>
+      </form>
+      <div id="messageDivAsyncAwait"></div>
+    </div>
+
+  </div>
+
   <script src="./index-1.js"></script>
   <script src="./index-2.js"></script>
+  <script src="./index-3.js"></script>
 
 </body>
 
